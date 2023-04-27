@@ -357,7 +357,7 @@ export function buildGraphQLOperation(
 	switch (graphQLOpType) {
 		case 'LIST':
 			operation = `sync${pluralTypeName}`;
-			documentArgs = `($limit: Int, $nextToken: String, $lastSync: AWSTimestamp, $filter: Model${typeName}FilterInput)`;
+			documentArgs = `($limit: Int, $nextToken: String, $lastSync: AWSTimestamp, $filter: ModelSync${typeName}FilterInput)`;
 			operationArgs =
 				'(limit: $limit, nextToken: $nextToken, lastSync: $lastSync, filter: $filter)';
 			selectionSet = `items {
